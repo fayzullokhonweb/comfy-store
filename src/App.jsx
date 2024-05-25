@@ -11,6 +11,7 @@ import {
   Register,
   SingleProduct,
   About,
+  Contact,
 } from "./pages";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
     {
       path: "/",
       element: <HomeLayout />,
-      // errorElement: <Error />,
+      errorElement: <Error />,
       children: [
         {
           index: true,
@@ -48,17 +49,21 @@ function App() {
           path: "/About",
           element: <About />,
         },
+        {
+          path: "/Contact",
+          element: <Contact />,
+        },
       ],
     },
     {
       path: "/login",
       element: <Login />,
-      // errorElement: <Error />,
+      errorElement: <Error />,
     },
     {
       path: "/register",
       element: <Register />,
-      // errorElement: <Error />,
+      errorElement: <Error />,
     },
   ]);
 

@@ -45,12 +45,8 @@ function Navbar() {
 
           <ul className="lg:ml-14 lg:flex lg:gap-x-8 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-2/3 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:px-10 max-lg:py-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
             <li className="mb-6 hidden max-lg:block">
-              <Link>
-                <img
-                  src="https://readymadeui.com/readymadeui.svg"
-                  alt="logo"
-                  className="w-36"
-                />
+              <Link className="text-xl font-medium" to="/">
+                Comfy Store
               </Link>
             </li>
             <Navlinks className="navbar-center" />

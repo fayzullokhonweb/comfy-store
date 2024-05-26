@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FormPassword from "../components/FormPassword";
-import FormEmail from "../components/FormEmail";
+import { FormEmail, FormPassword } from "../components";
 
 function Login() {
   return (

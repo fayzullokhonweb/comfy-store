@@ -11,8 +11,8 @@ function Navbar() {
   };
 
   return (
-    <header className="flex shadow-lg py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50 mb-10">
-      <div className="w-full flex flex-wrap items-center lg:gap-y-4 gap-y-6 gap-x-4">
+    <header className="flex shadow-lg py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50 mb-20 ">
+      <div className="w-full flex flex-wrap items-center max-w-7xl mx-auto lg:gap-y-4 gap-y-6 gap-x-4">
         <Link to="/" className="text-xl font-medium">
           Comfy Store
         </Link>

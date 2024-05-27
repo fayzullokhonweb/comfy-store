@@ -34,30 +34,6 @@ function Products() {
             description="  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             src="https://readymadeui.com/images/product9.webp"
           />
-          <ProductList
-            title=" Sole Elegance"
-            price="$12.00"
-            description="  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            src="https://readymadeui.com/images/product9.webp"
-          />
-          <ProductList
-            title=" Sole Elegance"
-            price="$12.00"
-            description="  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            src="https://readymadeui.com/images/product9.webp"
-          />
-          <ProductList
-            title=" Sole Elegance"
-            price="$12.00"
-            description="  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            src="https://readymadeui.com/images/product9.webp"
-          />
-          <ProductList
-            title=" Sole Elegance"
-            price="$12.00"
-            description="  Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            src="https://readymadeui.com/images/product9.webp"
-          />
         </div>
       </div>
     </div>

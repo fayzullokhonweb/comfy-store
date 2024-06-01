@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 import {
   Landing,
   Cart,
@@ -14,20 +15,26 @@ import {
   Contact,
 } from "./pages";
 
+// loader
+import { loader as LandingLoader } from "./pages/Landing";
+import { loader as ProductsLoader } from "./pages/Products";
+
 function App() {
   const routes = createBrowserRouter([
     {
       path: "/",
       element: <HomeLayout />,
-      errorElement: <Error />,
+      // errorElement: <Error />,
       children: [
         {
           index: true,
           element: <Landing />,
+          loader: LandingLoader,
         },
         {
           path: "/products",
           element: <Products />,
+          loader: ProductsLoader,
         },
         {
           path: "/Cart",
@@ -38,7 +45,7 @@ function App() {
           element: <Checkout />,
         },
         {
-          path: "/products/:id",
+          path: "/product/:id",
           element: <SingleProduct />,
         },
         {

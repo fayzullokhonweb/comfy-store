@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { customFetch, formatPrice } from "../utils";
+import { customFetch, formatPrice, generatedAmountOptions } from "../utils";
 
 function SingleProduct() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [productColor, setProductColor] = useState();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -35,7 +36,7 @@ function SingleProduct() {
   const dollarAmount = formatPrice(price);
   console.log(colors);
   return (
-    <div className=" grid lg:grid-cols-2 md:grid-cols-1 lg:gap-10 lg:max-w-7xl sm:max-w-full mx-auto p-4">
+    <div className="pb-20 grid lg:grid-cols-2 md:grid-cols-1 lg:gap-10 lg:max-w-7xl sm:max-w-full mx-auto p-4">
       <div className="">
         <img
           src={image}
@@ -56,6 +57,7 @@ function SingleProduct() {
         <div>
           <p>{description}</p>
         </div>
+        <h2 className="mt-4 text-lg font-semibold">Colors: </h2>
         <div className="flex flex-wrap gap-4 mt-4">
           {colors.map((color) => {
             return (
@@ -63,10 +65,36 @@ function SingleProduct() {
                 id={color}
                 type="button"
                 style={{ backgroundColor: color }}
-                className="w-7 h-7 rounded-full"
+                className={`w-7 h-7 rounded-full ${
+                  color == productColor && "border-2 border-secondary"
+                }`}
+                onClick={() => setProductColor(color)}
               ></button>
             );
           })}
+        </div>
+        {/* AMOUNT */}
+        <div className="form-control w-full max-xs">
+          <label className="label">
+            <h4 className="text-md font-medium tracking-wider capitalize">
+              Amount:
+            </h4>
+          </label>
+          <select
+            // onChange={handleAmount}
+            // value={amount}
+            className="select   select-primary border-2 select-bordered"
+          >
+            {generatedAmountOptions(10)}
+          </select>
+        </div>
+        <div className="mt-10">
+          <button
+            onClick={() => console.log("click me")}
+            className="btn btn-primary btn-md uppercase"
+          >
+            Add to bag
+          </button>
         </div>
       </div>
     </div>

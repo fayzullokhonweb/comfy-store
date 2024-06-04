@@ -26,9 +26,7 @@ function ProductsGrid() {
               <h3 className="text-lg capitalize font-extrabold text-gray-800">
                 {title}
               </h3>
-              <p className="text-gray-600 text-sm mt-2 line-clamp-5">
-                {description}
-              </p>
+              <p className="text-gray-600 text-sm mt-2 line-clamp-5">{description}</p>
               <h4 className="text-lg text-gray-800 font-bold mt-4">
                 {dollarAmount}
               </h4>

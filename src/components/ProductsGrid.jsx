@@ -1,10 +1,9 @@
 import React from "react";
-import { GrFormNextLink } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { formatPrice } from "../utils";
 import { useLoaderData } from "react-router-dom";
 
-function ProductList() {
+function ProductsGrid() {
   const { products } = useLoaderData();
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-xl:gap-4 gap-6">
@@ -27,7 +26,9 @@ function ProductList() {
               <h3 className="text-lg capitalize font-extrabold text-gray-800">
                 {title}
               </h3>
-              <p className="text-gray-600 text-sm mt-2 line-clamp-5">{description}</p>
+              <p className="text-gray-600 text-sm mt-2 line-clamp-5">
+                {description}
+              </p>
               <h4 className="text-lg text-gray-800 font-bold mt-4">
                 {dollarAmount}
               </h4>
@@ -60,4 +61,4 @@ function ProductList() {
   );
 }
 
-export default ProductList;
+export default ProductsGrid;

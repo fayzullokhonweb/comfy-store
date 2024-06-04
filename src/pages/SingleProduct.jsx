@@ -7,6 +7,11 @@ function SingleProduct() {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [productColor, setProductColor] = useState();
+  const [amount, setAmount] = useState(1);
+
+  const handleAmount = (e) => {
+    setAmount(parseInt(e.target.value));
+  };
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -65,7 +70,7 @@ function SingleProduct() {
                 id={color}
                 type="button"
                 style={{ backgroundColor: color }}
-                className={`w-7 h-7 rounded-full ${
+                className={`w-7 h-7 badge ${
                   color == productColor && "border-2 border-secondary"
                 }`}
                 onClick={() => setProductColor(color)}
@@ -81,8 +86,8 @@ function SingleProduct() {
             </h4>
           </label>
           <select
-            // onChange={handleAmount}
-            // value={amount}
+            onChange={handleAmount}
+            value={amount}
             className="select   select-primary border-2 select-bordered"
           >
             {generatedAmountOptions(10)}
